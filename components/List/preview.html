@@ -1,0 +1,23 @@
+<!-- @dsCard group="Components" height=260 -->
+<div id="root"></div>
+<script>
+  var e = window.React.createElement;
+  var root = window.ReactDOM.createRoot(document.getElementById('root'));
+
+  function App() {
+    var checked = window.React.useState(true);
+    var on = checked[0];
+    var setOn = checked[1];
+
+    return e(
+      'div',
+      { style: { width: '380px', border: '1px solid var(--neutral-container-high)', borderRadius: '12px', overflow: 'hidden' } },
+      e(window.DDS.List, { title: '이메일', value: 'robin@heybit.io', variant: 'value' }),
+      e(window.DDS.List, { title: '비밀번호 재설정', variant: 'chevron', onClick: function () {} }),
+      e(window.DDS.List, { title: '기준 통화 표시', value: '원화(KRW)', variant: 'value-chevron', onClick: function () {} }),
+      e(window.DDS.List, { title: '푸시 알림', variant: 'toggle', checked: on, onChange: function () { setOn(!on); } })
+    );
+  }
+
+  root.render(e(App));
+</script>

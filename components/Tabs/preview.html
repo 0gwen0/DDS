@@ -1,0 +1,30 @@
+<!-- @dsCard group="Navigation" height=220 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 24px; width: 375px; max-width: 100%;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var React = window.React;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+
+    function Demo() {
+      var state2 = React.useState(1);
+      var state3 = React.useState(0);
+      return e(
+        window.React.Fragment,
+        null,
+        e(window.DDS.Tabs, {
+          items: ['Menu', 'Menu'],
+          selected: state2[0],
+          onChange: state2[1]
+        }),
+        e(window.DDS.Tabs, {
+          items: ['Menu', 'Menu', 'Menu'],
+          selected: state3[0],
+          onChange: state3[1]
+        })
+      );
+    }
+
+    root.render(e(Demo));
+  })();
+</script>

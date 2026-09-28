@@ -1,0 +1,96 @@
+<!-- @dsCard height=320 -->
+<!--
+  derivation:
+  blocks — brand-main (radius-xl slab, the identity color) · ink (radius-md anchor, dark weight) ·
+           surface-tint (radius-xxl relief, bleeds off the right edge)
+  arrangement — staggered stack, brand slab largest, ink anchor bottom-right, tint block bleeding top-right
+  pattern — "soft, friendly, large radii" row: a discs/dot grid at one spacing pitch (space-24 padding,
+           36px pitch ≈ 3 × space-12), because the radius scale runs all the way to radius-full (pills,
+           floating buttons) — a system built for round, friendly shapes, not sharp UI
+  scales used — radius-xl/md/xxl for block corners, radius-full for the two state pills, space-24/space-12 for pitch
+-->
+<style>
+  .cover-root {
+    width: 960px;
+    height: 320px;
+    background: var(--neutral-surface);
+    position: relative;
+    font-family: var(--font-sans);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .cover-text {
+    position: absolute;
+    left: 56px;
+    bottom: 48px;
+    width: 400px;
+  }
+  .cover-name {
+    margin: 0;
+    color: var(--on-neutral-primary);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+  .cover-tagline {
+    margin: 16px 0 0;
+    color: var(--on-neutral-micro);
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .brand { fill: var(--on-main); }
+  .ink-fill { fill: var(--on-neutral-primary); }
+  .tint { fill: var(--main-container); }
+  .on-color { fill: var(--inverse-on-main); }
+  .success-fill { fill: var(--on-success); }
+  .danger-fill { fill: var(--on-danger); }
+  .r-xl { rx: 20px; }
+  .r-md { rx: 12px; }
+  .r-xxl { rx: 24px; }
+  .r-full { rx: 9999px; }
+  .dot { fill: var(--on-color); opacity: 0.9; }
+</style>
+<div class="cover-root">
+  <svg viewBox="0 0 960 320" width="960" height="320" xmlns="http://www.w3.org/2000/svg">
+    <!-- tint block, bleeding off the top-right edge -->
+    <rect class="tint r-xxl" x="800" y="-20" width="160" height="150" />
+
+    <!-- brand slab, the identity color -->
+    <rect class="brand r-xl" x="520" y="36" width="300" height="176" />
+    <!-- disc/dot pattern inside the brand slab, one pitch (36px) -->
+    <circle class="dot" cx="556" cy="72" r="6" />
+    <circle class="dot" cx="592" cy="72" r="6" />
+    <circle class="dot" cx="628" cy="72" r="6" />
+    <circle class="dot" cx="664" cy="72" r="6" />
+    <circle class="dot" cx="700" cy="72" r="6" />
+    <circle class="dot" cx="736" cy="72" r="6" />
+    <circle class="dot" cx="772" cy="72" r="6" />
+    <circle class="dot" cx="556" cy="108" r="6" />
+    <circle class="dot" cx="592" cy="108" r="6" />
+    <circle class="dot" cx="628" cy="108" r="6" />
+    <circle class="dot" cx="664" cy="108" r="6" />
+    <circle class="dot" cx="700" cy="108" r="6" />
+    <circle class="dot" cx="736" cy="108" r="6" />
+    <circle class="dot" cx="772" cy="108" r="6" />
+    <circle class="dot" cx="556" cy="144" r="6" />
+    <circle class="dot" cx="592" cy="144" r="6" />
+    <circle class="dot" cx="628" cy="144" r="6" />
+    <circle class="dot" cx="664" cy="144" r="6" />
+    <circle class="dot" cx="700" cy="144" r="6" />
+    <circle class="dot" cx="736" cy="144" r="6" />
+    <circle class="dot" cx="772" cy="144" r="6" />
+
+    <!-- ink anchor, bottom-right -->
+    <rect class="ink-fill r-md" x="560" y="228" width="200" height="56" />
+
+    <!-- two small state pills, kept small since they only ever mean a state -->
+    <rect class="success-fill r-full" x="790" y="240" width="52" height="20" />
+    <rect class="danger-fill r-full" x="850" y="240" width="52" height="20" />
+  </svg>
+  <div class="cover-text">
+    <p class="cover-name">든든<br />DDS</p>
+    <p class="cover-tagline">둥글고 부드러운 보라를 중심으로 한 든든 디자인 시스템</p>
+  </div>
+</div>

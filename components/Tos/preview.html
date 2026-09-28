@@ -1,0 +1,30 @@
+<!-- @dsCard group="Data Entry" height=520 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 32px;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        window.React.Fragment,
+        null,
+        e(window.DDS.Tos, {
+          showAllCheck: true,
+          allChecked: false,
+          items: [
+            { label: '[필수] 서비스 이용약관', checked: true },
+            { label: '[필수] 개인정보 수집 및 이용 동의', checked: true },
+            { label: '[선택] 마케팅 정보 수신 동의', checked: false }
+          ]
+        }),
+        e(window.DDS.Tos, {
+          title: '본인인증 약관',
+          items: [
+            { label: '[필수] 고유식별정보 처리 동의', checked: true },
+            { label: '[필수] 통신사 이용약관', description: '약관에 관한 간략한 설명 및 안내 사항', checked: false }
+          ]
+        })
+      )
+    );
+  })();
+</script>

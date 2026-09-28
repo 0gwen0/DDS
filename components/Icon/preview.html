@@ -1,0 +1,42 @@
+<!-- @dsCard group="Foundation" height=420 -->
+<div id="root"></div>
+<script>
+  var e = window.React.createElement;
+  var root = window.ReactDOM.createRoot(document.getElementById('root'));
+
+  var LINE = ['help-circle', 'warning-circle', 'cancel-circle', 'add-circle', 'close', 'check', 'chevron-up', 'chevron-down', 'chevron-left', 'chevron-right', 'arrow-forward', 'refresh'];
+  var FILL = ['cancel-circle', 'add-circle', 'help-circle', 'warning-circle', 'check', 'edit', 'backspace', 'mail', 'call', 'invest'];
+  var EMPH = ['chevron-left', 'chevron-right', 'chevron-up', 'chevron-down', 'close', 'check', 'share', 'setting'];
+  var BOTTOMBAR = ['home', 'benefit', 'invest', 'more', 'lounge'];
+
+  function Row(props) {
+    return e(
+      'div',
+      { style: { display: 'flex', flexDirection: 'column', gap: '8px' } },
+      e('p', { style: { fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 600, color: 'var(--on-neutral-tertiary)', margin: 0 } }, props.title),
+      e(
+        'div',
+        { style: { display: 'flex', gap: '16px', flexWrap: 'wrap', color: props.color || 'var(--on-neutral-primary)' } },
+        props.names.map(function (name) {
+          return e(
+            'div',
+            { key: name, style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '64px' } },
+            e(window.DDS.Icon, { name: name, style: props.style }),
+            e('span', { style: { fontFamily: 'var(--font-sans)', fontSize: '10px', color: 'var(--on-neutral-micro)', textAlign: 'center' } }, name)
+          );
+        })
+      )
+    );
+  }
+
+  root.render(
+    e(
+      'div',
+      { style: { display: 'flex', flexDirection: 'column', gap: '24px', padding: '16px' } },
+      e(Row, { title: 'line', names: LINE, style: 'line' }),
+      e(Row, { title: 'fill', names: FILL, style: 'fill' }),
+      e(Row, { title: 'emph', names: EMPH, style: 'emph' }),
+      e(Row, { title: 'bottombar', names: BOTTOMBAR, style: 'bottombar' })
+    )
+  );
+</script>

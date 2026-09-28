@@ -1,0 +1,25 @@
+<!-- @dsCard group="Navigation" height=200 -->
+<div id="root" style="width: 375px; max-width: 100%; border: 1px solid #ECECEE; border-radius: 8px; overflow: hidden;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var React = window.React;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+
+    function Demo() {
+      var state = React.useState(0);
+      return e(window.DDS.BottomNavigation, {
+        items: [
+          { label: '홈', icon: 'home' },
+          { label: '투자', icon: 'invest' },
+          { label: '라운지', icon: 'lounge' },
+          { label: '더 보기', icon: 'more' }
+        ],
+        selected: state[0],
+        onChange: state[1]
+      });
+    }
+
+    root.render(e(Demo));
+  })();
+</script>

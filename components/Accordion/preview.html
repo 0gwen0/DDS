@@ -1,0 +1,44 @@
+<!-- @dsCard group="Data Display" height=420 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 16px; width: 335px; max-width: 100%;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var React = window.React;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+
+    var ITEMS = [
+      {
+        title: '투자원리금 손실위험',
+        description:
+          '이루다 올웨더 상품은 예금자보호법에 따라 예금보험공사가 보호하지 않습니다. 또한 주식 등 위험자산에 투자되므로 투자결과 원금 손실이 발생할 수 있고 그 손실은 투자자에게 귀속됩니다.'
+      }
+    ];
+
+    function Demo() {
+      var state1 = React.useState(false);
+      var state2 = React.useState(true);
+      return e(
+        window.React.Fragment,
+        null,
+        e(window.DDS.Accordion, {
+          title: '상품안내',
+          open: state1[0],
+          onToggle: function () {
+            state1[1](!state1[0]);
+          },
+          items: ITEMS
+        }),
+        e(window.DDS.Accordion, {
+          title: '상품안내',
+          open: state2[0],
+          onToggle: function () {
+            state2[1](!state2[0]);
+          },
+          items: ITEMS
+        })
+      );
+    }
+
+    root.render(e(Demo));
+  })();
+</script>

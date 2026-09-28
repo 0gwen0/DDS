@@ -1,0 +1,18 @@
+<!-- @dsCard group="Layout" height=140 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 16px; width: 335px;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        window.React.Fragment,
+        null,
+        e('span', { style: { fontSize: '13px', color: '#92929e' } }, 'thin'),
+        e(window.DDS.Divider, {}),
+        e('span', { style: { fontSize: '13px', color: '#92929e' } }, 'thick'),
+        e(window.DDS.Divider, { thickness: 'thick' })
+      )
+    );
+  })();
+</script>

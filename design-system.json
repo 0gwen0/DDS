@@ -1,0 +1,33 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": { "v": 1, "at": "2026-09-17T04:00:00Z" },
+  "title": "든든 DDS",
+  "namespace": "DDS",
+  "libraries": [
+    { "name": "react", "version": "18" },
+    { "name": "react-dom", "version": "18" }
+  ],
+  "sections": {},
+  "groups": ["Logos"],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "m",
+      "order": ["dndn-symbol.png", "mono-black-symbol.png", "mono-white-symbol.png"],
+      "files": {
+        "dndn-symbol.png": { "name": "dndn-symbol.png", "blob": "3b08f0a7c8657ddda608d5b3c31a000f", "size": 89924, "type": "image/png" },
+        "mono-black-symbol.png": { "name": "mono-black-symbol.png", "blob": "5dce5e13c934891e66860c6687d860e1", "size": 55886, "type": "image/png" },
+        "mono-white-symbol.png": { "name": "mono-white-symbol.png", "blob": "4ef4926aeda2638afc8aac0343f365aa", "size": 49117, "type": "image/png" }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": { "readme": "project/README.md", "sections": [] },
+  "lastChange": {
+    "by": "궨",
+    "via": "Cowork",
+    "at": "2026-09-17T23:15:00Z",
+    "note": "README에서 '최신 버전 확인' 섹션과 다크모드/Modal Fullscreen 관련 Not-synced 메모 제거(궨 확인 — 별도 다크모드 없음). Modal에 layout('centered'/'padded'/'fullscreen') prop 추가 — storybook.dndn.io/?path=/docs/modal--docs의 실제 Fullscreen 스토리를 참고해, buttons를 좌/우 텍스트 링크로 보여주는 프로모션/배너형 레이아웃 반영."
+  }
+}

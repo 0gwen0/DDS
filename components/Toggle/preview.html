@@ -1,0 +1,26 @@
+<!-- @dsCard group="Data Entry" height=140 -->
+<div id="root" style="display: flex; align-items: center; gap: 24px;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var React = window.React;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+
+    function Demo() {
+      var t1 = React.useState(true);
+      var t2 = React.useState(false);
+      var c1 = React.useState(true);
+      var c2 = React.useState(false);
+      return e(
+        window.React.Fragment,
+        null,
+        e(window.DDS.Toggle, { checked: t1[0], onChange: function () { t1[1](!t1[0]); } }),
+        e(window.DDS.Toggle, { checked: t2[0], onChange: function () { t2[1](!t2[0]); } }),
+        e(window.DDS.CurrencyToggle, { checked: c1[0], onChange: function () { c1[1](!c1[0]); } }),
+        e(window.DDS.CurrencyToggle, { checked: c2[0], onChange: function () { c2[1](!c2[0]); } })
+      );
+    }
+
+    root.render(e(Demo));
+  })();
+</script>

@@ -1,0 +1,28 @@
+<!-- @dsCard group="Selection & Input" height=340 -->
+<div id="root" style="max-width: 360px"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        'div',
+        { style: { display: 'flex', flexDirection: 'column', gap: '28px' } },
+        e(window.DDS.TextField, {
+          label: '라벨',
+          placeholder: '플레이스 홀더',
+          descriptions: ['설명글']
+        }),
+        e(window.DDS.TextField, {
+          label: '라벨',
+          value: '입력한 정보',
+          disabled: true
+        }),
+        e(window.DDS.TextField, {
+          label: '라벨',
+          errorMessages: ['에러 힌트']
+        })
+      )
+    );
+  })();
+</script>

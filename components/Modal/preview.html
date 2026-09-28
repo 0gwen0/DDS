@@ -1,0 +1,18 @@
+<!-- @dsCard group="Feedback" height=260 -->
+<div id="root" style="position: relative; height: 240px; transform: translateZ(0); border-radius: 8px; overflow: hidden;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(window.DDS.Modal, {
+        open: true,
+        title: '휴대폰 번호 변경 실패',
+        buttons: [
+          { variant: 'outline', label: '취소' },
+          { variant: 'primary', label: '확인' }
+        ]
+      }, '본인 명의의 휴대폰 번호로만 변경할 수 있어요.')
+    );
+  })();
+</script>

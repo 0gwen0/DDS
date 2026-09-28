@@ -1,0 +1,16 @@
+<!-- @dsCard group="Actions" height=200 -->
+<div id="root" style="position: relative; height: 180px; transform: translateZ(0); border: 1px dashed #DEDEE2; border-radius: 8px; overflow: hidden;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(window.DDS.Floating, {
+        footers: [
+          { variant: 'outline', label: '취소' },
+          { variant: 'primary', label: '확인' }
+        ]
+      })
+    );
+  })();
+</script>

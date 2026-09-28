@@ -1,0 +1,28 @@
+<!-- @dsCard group="Data Display" height=260 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 24px;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        window.React.Fragment,
+        null,
+        e(window.DDS.Description, {
+          items: [
+            '[더보기 → 설정 → 내정보]에서 연결된 SNS 로그인을 해제하고 로그아웃 하신 후, 로그인 페이지에서 원하는 SNS를 연결해주세요.',
+            '전송자 : 업라이즈투자자문 주식회사 1544-1403',
+            '수신 상태 변경은 [더보기 → 설정 → 혜택 및 이벤트 알림]에서 가능합니다.'
+          ]
+        }),
+        e(window.DDS.Description, {
+          title: false,
+          items: [
+            '전송자 : 업라이즈투자자문 주식회사 1544-1403',
+            '수신 상태 변경은 [더보기 → 설정 → 혜택 및 이벤트 알림]에서 가능합니다.'
+          ]
+        })
+      )
+    );
+  })();
+</script>

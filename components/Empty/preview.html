@@ -1,0 +1,9 @@
+<!-- @dsCard group="Feedback" height=140 -->
+<div id="root" style="display: flex; align-items: center; justify-content: center; height: 120px;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(e(window.DDS.Empty, { message: '내역이 없습니다' }));
+  })();
+</script>

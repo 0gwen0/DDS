@@ -1,0 +1,17 @@
+<!-- @dsCard group="Navigation" height=280 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 12px; width: 375px; max-width: 100%; border: 1px solid #ECECEE; border-radius: 8px; overflow: hidden;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        window.React.Fragment,
+        null,
+        e(window.DDS.TopNavigation, { showLeft: true, title: '타이틀', showRight: true }),
+        e(window.DDS.TopNavigation, { showLeft: false, title: '타이틀', showRight: false }),
+        e(window.DDS.TopNavigation, { variant: 'profile', name: '김든든' })
+      )
+    );
+  })();
+</script>

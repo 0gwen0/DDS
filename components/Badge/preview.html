@@ -1,0 +1,28 @@
+<!-- @dsCard group="Data Display" height=140 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 16px;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        React.Fragment,
+        null,
+        e(
+          'div',
+          { style: { display: 'flex', gap: '12px', alignItems: 'center' } },
+          e(window.DDS.Badge, { variant: 'primary', label: 'NEW' }),
+          e(window.DDS.Badge, { variant: 'secondary', label: 'BETA' }),
+          e(window.DDS.Badge, { variant: 'tertiary', label: '안내' })
+        ),
+        e(
+          'div',
+          { style: { display: 'flex', gap: '12px', alignItems: 'center' } },
+          e(window.DDS.Badge, { variant: 'primary', size: 'small', label: 'NEW' }),
+          e(window.DDS.Badge, { variant: 'primary', size: 'medium', label: 'NEW' }),
+          e(window.DDS.Badge, { variant: 'primary', size: 'large', label: 'NEW' })
+        )
+      )
+    );
+  })();
+</script>

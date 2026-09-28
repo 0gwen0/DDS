@@ -1,0 +1,16 @@
+<!-- @dsCard group="Data Display" height=140 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 20px;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        React.Fragment,
+        null,
+        e(window.DDS.Indicator, { index: 0, length: 3 }),
+        e(window.DDS.Indicator, { index: 1, length: ['본인 확인', '계좌 개설', '완료'] })
+      )
+    );
+  })();
+</script>

@@ -1,0 +1,33 @@
+<!-- @dsCard group="Feedback" height=220 -->
+<div id="root" style="padding-top: 60px; display: flex; gap: 64px"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        React.Fragment,
+        null,
+        e(
+          'div',
+          null,
+          e('div', { style: { fontSize: '12px', color: '#92929E', marginBottom: '8px' } }, 'info (hover)'),
+          e(window.DDS.Tooltip, {
+            variant: 'info',
+            content: '이 항목에 대한 짧은 설명입니다.'
+          })
+        ),
+        e(
+          'div',
+          null,
+          e('div', { style: { fontSize: '12px', color: '#92929E', marginBottom: '8px' } }, 'guide (always on)'),
+          e(window.DDS.Tooltip, {
+            variant: 'guide',
+            showCloseButton: true,
+            content: '여기를 눌러 다음 단계로 이동하세요.'
+          })
+        )
+      )
+    );
+  })();
+</script>

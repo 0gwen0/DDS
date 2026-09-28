@@ -1,0 +1,24 @@
+<!-- @dsCard group="Feedback" height=340 -->
+<div id="root" style="position: relative; height: 320px; transform: translateZ(0); border-radius: 8px; overflow: hidden;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        window.DDS.BottomSheetModal,
+        {
+          open: true,
+          title: '출금 계좌 선택',
+          buttons: [{ variant: 'primary', label: '확인' }]
+        },
+        e(
+          'div',
+          { style: { display: 'flex', flexDirection: 'column' } },
+          e(window.DDS.List, { title: 'KB국민은행', value: '123-456-789012', variant: 'value' }),
+          e(window.DDS.List, { title: '신한은행', value: '110-222-333444', variant: 'value' })
+        )
+      )
+    );
+  })();
+</script>

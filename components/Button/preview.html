@@ -1,0 +1,29 @@
+<!-- @dsCard group="Actions" height=220 -->
+<div id="root" style="display: flex; flex-direction: column; gap: 12px; max-width: 420px;"></div>
+<script>
+  (function () {
+    var e = window.React.createElement;
+    var root = window.ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      e(
+        React.Fragment,
+        null,
+        e(window.DDS.Button, { variant: 'primary', label: '든든 바로가기' }),
+        e(
+          'div',
+          { style: { display: 'flex', gap: '8px' } },
+          e(window.DDS.Button, { variant: 'secondary', label: 'Secondary' }),
+          e(window.DDS.Button, { variant: 'tertiary', label: 'Tertiary' })
+        ),
+        e(
+          'div',
+          { style: { display: 'flex', gap: '8px' } },
+          e(window.DDS.Button, { variant: 'warning', label: 'Warning' }),
+          e(window.DDS.Button, { variant: 'outline', label: 'Outline' }),
+          e(window.DDS.Button, { variant: 'text', label: 'Text' })
+        ),
+        e(window.DDS.Button, { variant: 'primary', label: 'Disabled', disabled: true })
+      )
+    );
+  })();
+</script>
